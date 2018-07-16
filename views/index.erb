@@ -1,0 +1,15 @@
+<h1>
+  Let's Cook!
+</h1>
+
+
+<ul>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <li>
+      <%= recipe.name %>
+      <a href="/delete/<%= index %>"> delete item</a>
+    </li>
+  <% end %>
+</ul>
+
+<a href="./new">Make New Recipe</a>
